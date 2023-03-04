@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Onlab.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Onlab.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\OnlabEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Onlab">
+      <UniqueIdentifier>{FA79F555-15BB-3FF2-BFE0-42ED95422390}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Onlab\Dungeon.cpp">
+      <Filter>Source\Onlab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Onlab\Dungeon.h">
+      <Filter>Source\Onlab</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Onlab\DungeonData.cpp">
+      <Filter>Source\Onlab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Onlab\DungeonData.h">
+      <Filter>Source\Onlab</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Onlab\Floor.cpp">
+      <Filter>Source\Onlab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Onlab\Floor.h">
+      <Filter>Source\Onlab</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\Onlab\Onlab.Build.cs">
+      <Filter>Source\Onlab</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Onlab\Onlab.cpp">
+      <Filter>Source\Onlab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Onlab\Onlab.h">
+      <Filter>Source\Onlab</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Onlab\OnlabGameModeBase.cpp">
+      <Filter>Source\Onlab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Onlab\OnlabGameModeBase.h">
+      <Filter>Source\Onlab</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Onlab\ProceduralMesh.cpp">
+      <Filter>Source\Onlab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Onlab\ProceduralMesh.h">
+      <Filter>Source\Onlab</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Onlab\Wall.cpp">
+      <Filter>Source\Onlab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Onlab\Wall.h">
+      <Filter>Source\Onlab</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

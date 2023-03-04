@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Onlab",
+			"Path": "C:\\Projects\\Onlab\\Source\\Onlab.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "OnlabEditor",
+			"Path": "C:\\Projects\\Onlab\\Source\\OnlabEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

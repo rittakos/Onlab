@@ -1,0 +1,17 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\projects\\onlab\\intermediate\\build\\win64\\unrealeditor\\inc\\onlab\\proceduralmesh.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\projects\\onlab\\intermediate\\build\\win64\\onlabeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\projects\\onlab\\intermediate\\build\\win64\\unrealeditor\\development\\onlab\\definitions.onlab.h",
+            "c:\\projects\\onlab\\source\\onlab\\proceduralmesh.h",
+            "c:\\unreal\\ue_5.0\\engine\\plugins\\runtime\\proceduralmeshcomponent\\source\\proceduralmeshcomponent\\public\\proceduralmeshcomponent.h",
+            "c:\\unreal\\ue_5.0\\engine\\plugins\\runtime\\proceduralmeshcomponent\\intermediate\\build\\win64\\unrealeditor\\inc\\proceduralmeshcomponent\\proceduralmeshcomponent.generated.h",
+            "c:\\projects\\onlab\\intermediate\\build\\win64\\unrealeditor\\inc\\onlab\\proceduralmesh.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
