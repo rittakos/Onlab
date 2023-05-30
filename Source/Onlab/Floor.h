@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "ProceduralMesh.h"
+#include "DungeonData.h"
 #include "Floor.generated.h"
 
 UCLASS()
@@ -30,5 +31,5 @@ public:
 
 
 public:
-	void Init();
+	void Init(const LayoutData& floorData, UMaterialInterface* Material = nullptr);
 };

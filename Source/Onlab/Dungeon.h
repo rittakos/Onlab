@@ -17,6 +17,30 @@ class ONLAB_API ADungeon : public AActor
 {
 	GENERATED_BODY()
 
+	UPROPERTY(EditAnywhere)
+	UMaterialInterface* WallMaterial;
+
+	UPROPERTY(EditAnywhere)
+	UMaterialInterface* FloorMaterial;
+
+	UPROPERTY(EditAnywhere)
+	UMaterialInterface* RedMaterial;
+
+	UPROPERTY(EditAnywhere)
+	UMaterialInterface* GreenMaterial;
+
+	UPROPERTY(EditAnywhere)
+	UMaterialInterface* BlueMaterial;
+
+	UPROPERTY(EditAnywhere)
+	bool wallsVisible;
+
+	UPROPERTY(EditAnywhere)
+	float wallWidth;
+
+	UPROPERTY(EditAnywhere)
+	FString Path = TEXT("C:/Users/akosr/OneDrive/Desktop/dungeon.dg");
+
 private:
 	DungeonData dungeonData;
 

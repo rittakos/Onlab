@@ -11,6 +11,8 @@
     <None Include="..\..\Source\OnlabEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -36,6 +38,18 @@
       <Filter>Source\Onlab</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Onlab\DungeonData.h">
+      <Filter>Source\Onlab</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Onlab\DungeonReader.cpp">
+      <Filter>Source\Onlab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Onlab\DungeonReader.h">
+      <Filter>Source\Onlab</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Onlab\DungeonWriter.cpp">
+      <Filter>Source\Onlab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Onlab\DungeonWriter.h">
       <Filter>Source\Onlab</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Onlab\Floor.cpp">

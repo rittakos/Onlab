@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Dungeon.h"
+#include "DungeonReader.h"
 #include <Kismet/GameplayStatics.h>
 
 // Sets default values
@@ -14,7 +15,6 @@ ADungeon::ADungeon()
 void ADungeon::BeginPlay()
 {
 	Super::BeginPlay();
-	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, ("Dungeon."));
 	
 	SpawnParts();
 }
@@ -35,15 +35,35 @@ void ADungeon::SpawnParts()
 	FVector myLoc(0, 0, 0);
 
 	//AFloor* floor = GetWorld()->SpawnActor<AFloor>(AFloor::StaticClass(), myLoc, myRot, SpawnInfo);
+	DungeonReader reader(Path);
+	DungeonData data = reader.getDungeonData();
 
-	FTransform SpawnTransform(myRot, myLoc);
-	AFloor* floor = Cast<AFloor>(UGameplayStatics::BeginDeferredActorSpawnFromClass(this, AFloor::StaticClass(), SpawnTransform));
-	if (floor != nullptr)
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, (FString::FromInt(data.GetSeed())));
+
+	UWorld* World = GetWorld();
+	const FTransform SpawnLocAndRotation;
+	
+	for (const LayoutData& floor : data.GetFloors())
 	{
-		floor->Init();
-
-		UGameplayStatics::FinishSpawningActor(floor, SpawnTransform);
+		AFloor* newFloor = World->SpawnActorDeferred<AFloor>(AFloor::StaticClass(), SpawnLocAndRotation);
+		UMaterialInterface* material = FloorMaterial;
+		int color = FMath::RandRange(0, 1000) % 4;
+		if (color == 0)
+			material = BlueMaterial;
+		else if (color == 1)
+			material = GreenMaterial;
+		else if (color == 2)
+			material = RedMaterial;
+		newFloor->Init(floor, material);
+		newFloor->FinishSpawning(SpawnLocAndRotation);
 	}
 
+
+	for (const WallData& wall : data.GetWalls())
+	{
+		AWall* newWall = World->SpawnActorDeferred<AWall>(AWall::StaticClass(), SpawnLocAndRotation);
+		newWall->Init(wall, WallMaterial);
+		newWall->FinishSpawning(SpawnLocAndRotation);
+	}
 }
 

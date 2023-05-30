@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "ProceduralMesh.h"
+#include "DungeonData.h"
 #include "GameFramework/Actor.h"
 #include "Wall.generated.h"
 
@@ -10,7 +12,11 @@ UCLASS()
 class ONLAB_API AWall : public AActor
 {
 	GENERATED_BODY()
-	
+private:
+	UProceduralMesh* procMesh;
+
+	TArray<FVector> Vertices;
+	TArray<int32> Triangles;
 public:	
 	// Sets default values for this actor's properties
 	AWall();
@@ -23,4 +29,6 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+public:
+	void Init(const WallData& wallData, UMaterialInterface* Material = nullptr);
 };
